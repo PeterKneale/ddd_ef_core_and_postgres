@@ -1,0 +1,11 @@
+﻿{
+    "Logging": {
+        "LogLevel": {
+            "Default": "Debug",
+            "Microsoft.EntityFrameworkCore": "Debug"
+        }
+    },
+    "ConnectionStrings": {
+        "Db": "Host=localhost;Database=postgres;username=postgres;Password=postgres"
+    }
+}

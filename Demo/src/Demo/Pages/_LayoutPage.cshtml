@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "_Layout";
+}
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Demo</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" asp-page="/Students/Index">Students</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container mt-5">
+    <p class="h1">@ViewBag.Title</p>
+    <div class="row mt-5">
+        <div class="col">
+            @RenderBody()
+        </div>
+    </div>
+</div>
