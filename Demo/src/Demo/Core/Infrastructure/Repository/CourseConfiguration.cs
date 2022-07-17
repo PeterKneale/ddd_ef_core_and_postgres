@@ -1,4 +1,5 @@
 ﻿using Demo.Core.Domain.Courses;
+using Demo.Core.Domain.Students;
 using Demo.Core.Domain.Teachers;
 
 namespace Demo.Core.Infrastructure.Repository;
@@ -28,6 +29,17 @@ public class CourseConfiguration : IEntityTypeConfiguration<Course>
                 name.Property(p => p.Description).HasColumnName("description");
             });
 
+        builder.OwnsMany<Enrollment>("_enrollments", enrollemnts => {
+            enrollemnts.ToTable("enrollments");
+            enrollemnts.Property(p => p.Id).HasConversion(x => x.Value, x => EnrollmentId.CreateInstance(x));
+            enrollemnts.Property(p => p.CourseId).HasConversion(x => x.Value, x => CourseId.CreateInstance(x));
+            enrollemnts.Property(p => p.StudentId).HasConversion(x => x.Value, x => StudentId.CreateInstance(x));
+            enrollemnts.Property(x => x.IsActive);
+            enrollemnts.Property(x => x.EnrolledAt);
+            enrollemnts.Property(x => x.UnenrolledAt);
+            enrollemnts.Ignore(x => x.DomainEvents);
+        });
+        
         builder
             .Ignore(x => x.DomainEvents);
     }

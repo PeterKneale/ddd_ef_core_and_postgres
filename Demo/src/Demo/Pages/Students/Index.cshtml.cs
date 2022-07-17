@@ -1,7 +1,7 @@
 ﻿using Demo.Core.Application.Students.Queries;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Demo.Pages.Users;
+namespace Demo.Pages.Students;
 
 public class Index : PageModel
 {

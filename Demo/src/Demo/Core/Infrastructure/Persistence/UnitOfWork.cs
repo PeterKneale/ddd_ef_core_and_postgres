@@ -1,7 +1,7 @@
 ﻿using System.Data;
 using Microsoft.EntityFrameworkCore.Storage;
 
-namespace Demo.Core.Infrastructure.Repository;
+namespace Demo.Core.Infrastructure.Persistence;
 
 public interface IUnitOfWork
 {

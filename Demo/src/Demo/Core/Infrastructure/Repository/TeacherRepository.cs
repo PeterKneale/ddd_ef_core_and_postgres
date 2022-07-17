@@ -1,4 +1,5 @@
 ﻿using Demo.Core.Domain.Teachers;
+using Demo.Core.Infrastructure.Persistence;
 
 namespace Demo.Core.Infrastructure.Repository;
 

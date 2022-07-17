@@ -2,6 +2,7 @@
 using Demo.Core.Application.Contracts;
 using Demo.Core.Domain.Common;
 using Demo.Core.Domain.Students;
+using Demo.Core.Infrastructure.Persistence;
 using Demo.Core.Infrastructure.Repository;
 
 namespace Demo.IntegrationTests.Infrastructure.Database;

@@ -2,7 +2,7 @@
 using Demo.Core.Domain.Students;
 using Demo.Core.Domain.Teachers;
 
-namespace Demo.Core.Infrastructure.Repository;
+namespace Demo.Core.Infrastructure.Persistence;
 
 public class DatabaseContext : DbContext
 {

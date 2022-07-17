@@ -24,6 +24,14 @@ public class Migration1 : Migration
             .WithColumn("title").AsString()
             .WithColumn("description").AsString().Nullable();
         
+        Create.Table("enrollments")
+            .WithColumn("id").AsGuid().PrimaryKey()
+            .WithColumn("student_id").AsGuid()
+            .WithColumn("course_id").AsGuid()
+            .WithColumn("is_active").AsBoolean()
+            .WithColumn("enrolled_at").AsDateTime()
+            .WithColumn("unenrolled_at").AsDateTime().Nullable();
+        
         Create.Table("categories")
             .WithColumn("id").AsGuid().PrimaryKey()
             .WithColumn("title").AsString()
@@ -32,6 +40,7 @@ public class Migration1 : Migration
 
     public override void Down()
     {
+        DropTableIfExists("enrollments");
         DropTableIfExists("categories");
         DropTableIfExists("courses");
         DropTableIfExists("students");

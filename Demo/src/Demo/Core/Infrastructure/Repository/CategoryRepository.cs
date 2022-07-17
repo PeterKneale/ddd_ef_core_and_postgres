@@ -1,4 +1,6 @@
-﻿namespace Demo.Core.Infrastructure.Repository;
+﻿using Demo.Core.Infrastructure.Persistence;
+
+namespace Demo.Core.Infrastructure.Repository;
 
 public class CategoryRepository : ICategoryRepository
 {

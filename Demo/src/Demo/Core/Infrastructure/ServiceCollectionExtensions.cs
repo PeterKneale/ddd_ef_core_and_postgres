@@ -2,6 +2,7 @@
 using System.Reflection;
 using Dapper;
 using Demo.Core.Application;
+using Demo.Core.Infrastructure.Persistence;
 using Demo.Core.Infrastructure.Repository;
 using FluentMigrator.Runner;
 using Microsoft.Data.SqlClient;

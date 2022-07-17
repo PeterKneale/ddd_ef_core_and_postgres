@@ -1,0 +1,11 @@
+﻿@page
+@model View
+@{
+    ViewBag.Title = "View course";
+}
+
+<form>
+    <display for="FirstName"/>
+    <display for="LastName"/>
+    <a asp-page="Edit" asp-route-id="@Model.Id">Edit</a>
+</form>

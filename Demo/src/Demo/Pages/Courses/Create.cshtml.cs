@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Demo.Core.Application.Students.Commands;
+using Demo.Core.Application.Courses.Commands;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Demo.Pages.Users;
+namespace Demo.Pages.Courses;
 
 public class Create : PageModel
 {
@@ -21,20 +21,20 @@ public class Create : PageModel
             return Page();
         }
 
-        await _mediator.Send(new CreateStudent.Command(Guid.NewGuid(), FirstName, LastName));
-        
-        return RedirectToPage(nameof(Index));
+        await _mediator.Send(new CreateCourse.Command(Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid(), Title, Description));
+
+        return RedirectToPage(nameof(Students.Index));
     }
 
-    [Display(Name = "First Name")]
+    [Display(Name = "Title")]
     [Required]
     [BindProperty]
     [StringLength(50)]
-    public string FirstName { get; set; }
+    public string Title { get; set; }
 
-    [Display(Name = "Last Name")]
+    [Display(Name = "Description")]
     [Required]
     [BindProperty]
     [StringLength(50)]
-    public string LastName { get; set; }
+    public string Description { get; set; }
 }

@@ -1,4 +1,5 @@
 ﻿using Demo.Core.Infrastructure.Database;
+using Demo.Core.Infrastructure.Persistence;
 using Demo.Core.Infrastructure.Repository;
 
 namespace Demo.Core.Application.Behaviours;

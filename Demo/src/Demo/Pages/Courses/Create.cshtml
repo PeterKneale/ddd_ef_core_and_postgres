@@ -1,0 +1,15 @@
+﻿@page
+@model Create
+@{
+    ViewBag.Title = "Create new course";
+}
+
+<div asp-validation-summary="All"></div>
+
+<form method="post">
+    <editor for="Title"/>
+    <editor for="Description"/>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary"/>
+    </div>
+</form>

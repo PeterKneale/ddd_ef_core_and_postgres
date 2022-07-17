@@ -1,6 +1,6 @@
 ﻿using Demo.Core.Domain.Students;
 
-namespace Demo.Core.Infrastructure.Repository;
+namespace Demo.Core.Infrastructure.Persistence;
 
 public interface IDomainEventDispatcher
 {

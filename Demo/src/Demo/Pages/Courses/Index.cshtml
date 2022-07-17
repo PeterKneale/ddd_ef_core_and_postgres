@@ -1,0 +1,41 @@
+﻿@page
+@model Index
+@{
+    ViewBag.Title = "Courses";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">students</h3>
+        <a asp-page="Create" class="ms-auto">Create</a>
+    </div>
+
+    <table class="table table table-vcenter card-table">
+        <thead>
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Category</th>
+            <th scope="col">Active Enrollments</th>
+            <th scope="col" colspan="2">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.Data.Courses)
+        {
+            <tr>
+                <td>@item.CourseTitle</td>
+                <td>@item.CategoryTitle</td>
+                <td>@item.ActiveEnrollments</td>
+                <td>
+                    <a asp-page="View" asp-route-id="@item.CourseId">View</a>
+                </td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@item.CourseId">Edit</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+
+</div>
